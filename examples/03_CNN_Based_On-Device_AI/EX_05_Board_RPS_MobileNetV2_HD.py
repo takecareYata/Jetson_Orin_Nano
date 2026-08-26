@@ -44,6 +44,7 @@ def make_square_img(img):
 def processImage(frame):
     # 1. 손 검출 시도
     hands, _ = hd.findHands(frame, draw=False)
+    #hands, frame = hd.findHands(frame, draw=True)#왼손, 오른손 검출 및 관절 검출
     if not hands:
         return
 
